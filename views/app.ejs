@@ -1,0 +1,59 @@
+<%
+/*                                            *\
+** ------------------------------------------ **
+**      Proxi -- Smart Document System        **
+** ------------------------------------------ **
+**  Copyright (c) 2017 - Kyle Derby MacInnis  **
+**                                            **
+** Any unauthorized distribution or transfer  **
+**    of this work is strictly prohibited.    **
+**                                            **
+**           All Rights Reserved.             **
+** ------------------------------------------ **
+\*                                            */
+%>
+<html>
+    <head>
+        <!-- TITLE -->
+        <title>Proxi - Smart Documents Made Easy</title>
+        <!-- STYLE SHEETS -->
+        <link rel="stylesheet" type="text/css" href="app/css/app.css">
+        <link rel="stylesheet" type="text/css" href="bower/bootstrap/dist/css/bootstrap.min.css">
+        <!-- ANGULAR LIBRARIES -->
+        <!-- AngularJS -->
+        <script type="text/javascript" src="bower/angular/angular.min.js"></script>
+        <!-- UI Router -->
+        <script type="text/javascript" src="bower/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <!-- UI Bootstrap -->
+        <script type="text/javascript" src="bower/angular-bootstrap/ui-bootstrap.min.js"></script>
+        <!-- JQUERY -->
+        <script type="text/javascript" src="bower/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript">var $jQ = jQuery.noConflict();</script>
+        <!-- MODULE DEPENDENCIES -->
+        <!-- Common -->
+        <script type="text/javascript" src="app/ng/common/util.js"></script>
+        <!-- Services -->
+        <script type="text/javascript" src="app/ng/service/testService.js"></script>
+        <script type="text/javascript" src="app/ng/service/testFactory.js"></script>
+        <!-- Controllers -->
+        <script type="text/javascript" src="app/ng/controller/main.js"></script>
+        <!-- Directives -->
+        <script type="text/javascript" src="app/ng/directive/dragNDrop.js"></script>
+        <script type="text/javascript" src="app/ng/directive/downloadFile.js"></script>
+        <!-- Components -->
+
+        <!-- Main App -->
+        <script type="text/javascript" src="app/ng/app.js"></script>
+    </head>
+    <!-- BODY -->
+    <body ng-app="proxi">
+        <h1>Proxi - Smart Documents</h1><br/><br/>
+        <p ng-controller="main as $ctrl">{{$ctrl.test}}</p>
+        <div drag-n-drop class="panel">
+            Drag ME!!<br />
+            <br/>
+            <download-btn url="/app/ng/app.js" filename="app.js"></download-btn>
+        </div>
+        <h2>Coming Soon...</h2>
+    </body>
+</html>
